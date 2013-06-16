@@ -1,14 +1,15 @@
 
 NuvolaApp::Application.routes.draw do
-  get "home/index"
+  
+  get "users/new"
 
-  get "pages/home"
+match '/signup', :to => 'users#new'
+match '/about', :to => 'pages#about'
+match '/contact', :to => 'pages#contact'
+match '/classes', :to => 'pages#classes'
+match '/communities', :to => 'pages#communities'
+match '/trending', :to => 'pages#trending'
 
-  get "pages/contact"
-
-  get "pages/about"
-
-  get "pages/classes"
 
 root :to => 'pages#home'
 

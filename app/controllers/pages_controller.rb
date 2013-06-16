@@ -14,4 +14,12 @@ class PagesController < ApplicationController
   def classes
   @title = "Classes"
   end
+
+def communities
+@title = "Communities"
+end
+
+def trending
+@title = "Trending"
+end
 end

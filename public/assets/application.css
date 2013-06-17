@@ -46,7 +46,7 @@ a:hover {
 }
 
 a:visited {
-	color: #069;
+	color: #09c;
 }
 
 /* Navigation */
@@ -78,7 +78,7 @@ nav u1 li {
 	font-size: 125%;
 	font-weight: bold;
 	margin-top: 8px;
-	text-shadow: 0.1em 0.1em 0.2em #333;
+	text-shadow: 0.1em 0.1em #333;
 }
 
 nav ul li a {

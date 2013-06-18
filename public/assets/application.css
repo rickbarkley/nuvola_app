@@ -18,7 +18,10 @@ header img {
 	
 	float: left;
 	width:950px;
-	box-shadow: 10px 10px 5px #888888;	
+	margin-top: -5px;
+	box-shadow: 10px 0px 5px #888888;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;	
 }
 
 section {
@@ -52,30 +55,44 @@ a:visited {
 /* Navigation */
 
 /*
-nav {
-	background-image: url("images/nav4.png");
-	width: 1200px;
-}
-nav {
-	background-color: white;
-	background-image: url(images/nav4.png");
-	padding: 0 0.7em;
-	white-space: nowrap;
-	margin-bottom:20px;
+nav img {
+	
+	width: 950px;
+	margin-top 1em;
 }
 */
+nav {
+	background-image: url("images/nav4.png");
+	margin-top: 15px;
+/*	background-color: white;*/
+/*	padding: 0 0.7em;*/
+/*	white-space: nowrap;*/
+	margin-bottom:20px;
+	width: 950px;
+	box-shadow: 10px 10px 5px #888888;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px; 
+}
+
 nav u1 {
+	
+	width: 950px;
+	-moz-border-radius: 10px
+	-webkit-border-radius: 10px;
+/*	border-radius: 10px;
+	height: 400px;
 	margin: 10px;
-	padding: 10px
+	padding: 10px*/
 	mrgin-bottom: 20px;
+	margin-top: 20px;
 }
 
 nav u1 li {
-	background-image: url("images/nav4.png"):
+/*	background-image: url("images/nav4.png");*/
 	list-style-type: none;
 	display: inline-block;
-	padding: 0.2em 0.9em;
-	font-size: 125%;
+	padding: 0.2em 1.1em;
+	font-size: 135%;
 	font-weight: bold;
 	margin-top: 8px;
 	text-shadow: 0.1em 0.1em #333;
@@ -112,13 +129,13 @@ a.signup_button {
 	background: #09c;
 	font-size: 130%;
 	font-weight: bold;
-	padding: 20px;
+	padding: 15px;
 	box-shadow: 10px 10px 5px #888888;
 }
 
 footer {
 	text-align: center;
-	margin-top: 15px;
+	margin-top: 20px;
 	background: #fff;
 	display: block;
 	margin-left: auto;

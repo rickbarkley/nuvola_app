@@ -1,0 +1,13 @@
+<% if @user.errors.any? %>
+	<div id="error_explination">
+		<h2><%= pluralize(@user.errors.count, "error") %>
+		prohibited User Sign Up:</h2>
+		
+		<p>There were problems with the following</p>
+		<u1>
+			<% @user.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+				<% end %>
+				</u1>
+				</div>
+				<% end %>

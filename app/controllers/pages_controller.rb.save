@@ -23,18 +23,9 @@ def trending
 @title = "Trending"
 end
 
-#classes
-
-def stand
-@title = "Stand and Let the Lord Fight Your Battles"
+def stand_deliver
+@title = "Stand and Deliver"
 end
 
-def win7
-@title = "intro to Windows 7"
-end
-
-def tcpip
-@title = "Intro to Networking"
-end
 
 end

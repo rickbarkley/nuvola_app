@@ -8,6 +8,27 @@ body {
      	width: 100%;
 	hight: 400px;
 }
+
+menu {
+	position: absolute;
+	top:20px;
+	left: 890px;
+	font-size: 125%;
+	background-color: white;
+        padding: 0 0.7em;
+        white-space: nowrap;
+	-moz-border-radius:  10px;
+	-webkit-border-radius:  10px;
+	border-radius:  10px;	
+	box-shadow: 10px 10px 5px #888888;
+}
+menu li {
+	list-style-type: none;
+	display: inline-block;
+	padding: 0.3em;
+	
+}
+	
 	
 header {
 	padding-top: 0px;

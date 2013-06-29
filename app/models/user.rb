@@ -9,7 +9,6 @@
 #  updated_at :datetime         not null
 #
 
-
 class User < ActiveRecord::Base
   attr_accessor :password
     attr_accessible :email, :name, :password, :password_confirmation
@@ -42,6 +41,12 @@ class User < ActiveRecord::Base
     return user if user.has_password?(submitted_password)
     return nil
     end
+
+def self.authenticate_with_salt(id, cookie_salt)
+user = find_by_id(id)
+(user && user.salt == cookie_salt) ? user : nil
+end
+
     
     private
     

@@ -12,7 +12,9 @@ body {
 menu {
 	position: absolute;
 	top:20px;
-	left: 890px;
+	float: right;
+	/*left: 890px;*/
+	right: 120px;
 	font-size: 125%;
 	background-color: white;
         padding: 0 0.7em;
@@ -242,4 +244,12 @@ font-size: 140%;
 h2 {
 
 font-size: 135%;
+}
+
+ul.users {
+margin-top: 1em;
+}
+
+.users li {
+list-style: none;
 }

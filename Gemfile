@@ -8,7 +8,7 @@ gem 'rails', '3.2.13'
 gem 'sqlite3'
 
 gem "gravatar_image_tag"
-gem "paginate"
+# gem "paginate"
 gem "will_paginate"
 
 group :development do

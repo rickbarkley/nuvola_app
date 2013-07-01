@@ -16,7 +16,8 @@ menu {
 	/*left: 890px;*/
 	right: 120px;
 	font-size: 125%;
-	background-color: white;
+	/*font-weight: bold;*/
+	background-color: #fff;
         padding: 0 0.7em;
         white-space: nowrap;
 	-moz-border-radius:  10px;
@@ -41,6 +42,7 @@ header img {
 	
 	float: left;
 	width:950px;
+	height: 185px;
 	margin-top: -5px;
 	box-shadow: 10px 0px 5px #888888;
 	border-top-left-radius: 10px;
@@ -67,7 +69,7 @@ a {
 }
 
 a:hover {
-	color: #069;
+	color: #09c;
 	text-decoration: underline;
 }
 
@@ -118,16 +120,19 @@ nav u1 li {
 	font-size: 135%;
 	font-weight: bold;
 	margin-top: 8px;
+	color: #efefef !important;
 	text-shadow: 0.1em 0.1em #333;
+
 }
 
 nav ul li a {
 	padding: 0 5px;
 	front-weight: bold;
+	color: #efefef !important;
 }
 
 nav ul li a:visited {
-	color: #09c;
+	color: #efefef !important;
 }
 
 nav ul li a:hover {
@@ -252,4 +257,11 @@ margin-top: 1em;
 
 .users li {
 list-style: none;
+}
+
+subfooter img {
+	padding: 15px;
+	display: block;
+	    margin-left: auto;
+	    margin-right: auto;
 }

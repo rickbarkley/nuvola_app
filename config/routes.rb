@@ -1,22 +1,28 @@
 
 NuvolaApp::Application.routes.draw do
   
-  get "sessions/new"
+  
+
+get "classes/index"
 
 resources :users
 resources :sessions, :only => [ :new, :create, :destroy ]  
+resources :classes
+resources :courses 
 
 match '/signup', :to => 'users#new'
 match '/signin', :to => 'sessions#new'
 match '/signout', :to => 'sessions#destroy'
 match '/about', :to => 'pages#about'
 match '/contact', :to => 'pages#contact'
-match '/classes', :to => 'pages#classes'
 match '/communities', :to => 'pages#communities'
 match '/trending', :to => 'pages#trending'
 match '/classes/stand', :to => 'pages#stand'
 match '/classes/win7', :to => 'pages#win7'
 match '/classes/tcpip', :to => 'pages#tcpip'
+match '/new', :to => 'classes#new'
+match '/course_creation', :to => 'courses#new'
+match '/admin', :to => 'pages#admin'
 
 
 root :to => 'pages#home'

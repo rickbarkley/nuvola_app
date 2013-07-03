@@ -1,0 +1,15 @@
+<h1>
+<%= @course.title %>
+</h1>
+
+<br />
+<p></p>
+<p></p>
+<p>Description: <%= @course.description %></p><br />
+
+<p> Preview: </p>
+<%= @course.media_url.html_safe %><br />
+<br />
+<p> Cost: $<%= @course.cost %></p>
+
+<li><%= link_to "Purchase Now", '#' %></li>

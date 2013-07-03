@@ -23,6 +23,10 @@ def trending
 @title = "Trending"
 end
 
+def admin
+@title = "Admin"
+end
+
 #classes
 
 def stand

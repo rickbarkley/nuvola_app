@@ -1,0 +1,16 @@
+<h1>Available Courses</h1>
+<h2>
+<ul class="courses">
+<% @courses.each do |course| %>
+	<li>
+		<%= link_to course.title, course %>
+		<% if current_user.admin? %>
+                | <%= link_to "delete", course, :method => :delete, :confirm => "you sure?",
+                                              :title => "Delete #{course.title}" %>
+                <% end %>
+		
+		</li>
+		<% end %>
+		</ul>
+
+</h2>

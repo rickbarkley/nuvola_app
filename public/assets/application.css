@@ -253,3 +253,10 @@ margin-top: 1em;
 .users li {
 list-style: none;
 }
+
+subfooter img {
+	padding: 15px;
+	display: block;
+        margin-left: auto;
+	margin-right: auto;
+}

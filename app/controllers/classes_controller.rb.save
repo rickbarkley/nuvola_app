@@ -1,0 +1,14 @@
+class ClassesController < ApplicationController
+  def index
+	@title = "Available Classes"
+	@classes = Classes.paginate(:page => params[:page])
+  end
+  
+  def new 
+	@title = "New Class Creation"
+	end
+
+  def show
+	@title = "Class created"
+
+end

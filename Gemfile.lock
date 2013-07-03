@@ -31,6 +31,9 @@ GEM
     annotate (2.5.0)
       rake
     arel (3.0.2)
+    auto_html (1.6.0)
+      redcarpet (~> 2.0)
+      rinku (~> 1.5.0)
     builder (3.0.4)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -92,6 +95,8 @@ GEM
     rake (10.0.4)
     rdoc (3.12.2)
       json (~> 1.4)
+    redcarpet (2.3.0)
+    rinku (1.5.1)
     rspec (2.13.0)
       rspec-core (~> 2.13.0)
       rspec-expectations (~> 2.13.0)
@@ -139,6 +144,7 @@ PLATFORMS
 
 DEPENDENCIES
   annotate
+  auto_html
   coffee-rails (~> 3.2.1)
   factory_girl_rails
   faker

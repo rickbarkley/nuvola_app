@@ -10,6 +10,7 @@ gem 'sqlite3'
 gem "gravatar_image_tag"
 # gem "paginate"
 gem "will_paginate"
+gem "auto_html"
 
 group :development do
 gem "rspec-rails"

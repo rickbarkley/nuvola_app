@@ -1,0 +1,31 @@
+<h1>Course Creation</h1>
+	
+	<h2>Course Preview Content</h2>
+<%= form_for @course do |f| %>
+ 
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.label "Preview Media URL" %><br />
+    <%= f.text_field :media_url %>
+  </p>
+<p>
+	<%= f.label :cost %><br />
+	$<%= f.number_field :cost %>
+</p>
+<h2>Course Content:</h2>
+<p>
+  <%= f.fields_for :videos do |builder| %>
+    <%= render "video_fields", :f => builder %>
+</p>
+
+
+  <% end %>
+  <p><%= f.submit "Submit" %></p>
+<% end %>

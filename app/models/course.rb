@@ -12,10 +12,13 @@
 #
 
 class Course < ActiveRecord::Base
+
 include AutoHtml
-
-  attr_accessible :cost, :description, :title, :media_url
-
+    has_many :videos, :dependent => :destroy
+    attr_accessible :videos_attributes, :cost, :description, :title, :media_url
+    accepts_nested_attributes_for :videos, :allow_destroy => true
+    
+    
 auto_html_for :Media_url do
 html_escape
 vimeo

@@ -1,0 +1,13 @@
+<h1>Available (Final) Courses</h1>
+<h2>
+<ul class="finalcourses">
+<% @finalcourses.each do |finalcourse| %>
+	<li>
+		<%= link_to finalcourse.title, finalcourse %>
+	
+		
+		</li>
+		<% end %>
+		</ul>
+
+</h2>

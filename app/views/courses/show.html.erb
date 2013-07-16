@@ -12,4 +12,11 @@
 <br />
 <p> Cost: $<%= @course.cost %></p>
 
+
+
 <li><%= link_to "Purchase Now", '#' %></li>
+<ol>
+<% for video in @course.videos %>
+<%=h video.media_url.html_safe %>
+</ol>
+<% end %>

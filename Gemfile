@@ -11,6 +11,7 @@ gem "gravatar_image_tag"
 # gem "paginate"
 gem "will_paginate"
 gem "auto_html"
+gem "nested_form"
 
 group :development do
 gem "rspec-rails"

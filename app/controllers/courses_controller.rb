@@ -1,4 +1,5 @@
 class CoursesController < ApplicationController
+    
   before_filter :authenticate, :only => [:index, :edit, :update]
   before_filter :correct_user, :only => [:edit, :update]
   before_filter :admin_user,   :only => [:destroy, :create]
@@ -15,18 +16,24 @@ end
 
   def new
 	@course = Course.new
+      @video = Video.new
+      3.times do
+          video = @course.videos.build
+          
+      end
 	@title = "New Course Creation"
   end
 
   def create
-        @course = Course.new(params[:course])
+      @course = Course.new(params[:course])
         if  @course.save
+           
         redirect_to @course
 	else
 	@title = "New Course Creation"
 	render 'new'
 
-end
+end      
 end
    def edit
 	@title = "Edit title"

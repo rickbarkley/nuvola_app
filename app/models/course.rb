@@ -9,12 +9,14 @@
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  media_url   :string(255)
+#  purchased   :boolean
 #
 
 class Course < ActiveRecord::Base
 
 include AutoHtml
     has_many :videos, :dependent => :destroy
+    has_and_belongs_to_many :users
     attr_accessible :videos_attributes, :cost, :description, :title, :media_url
     accepts_nested_attributes_for :videos, :allow_destroy => true
     

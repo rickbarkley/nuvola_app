@@ -5,6 +5,10 @@ NuvolaApp::Application.routes.draw do
 
  
 
+  get "microposts/create"
+
+  get "microposts/destroy"
+
 get "classes/index"
 get "finalcourses/index"
     
@@ -13,6 +17,7 @@ resources :sessions, :only => [ :new, :create, :destroy ]
 resources :classes
 resources :courses
 resources :finalcourses
+resources :microposts, :only => [ :create, :destroy ]
 
 match '/signup', :to => 'users#new'
 match '/signin', :to => 'sessions#new'

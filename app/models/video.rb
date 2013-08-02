@@ -6,6 +6,7 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  media_url  :string(255)
+#  course_id  :integer
 #
 
 class Video < ActiveRecord::Base

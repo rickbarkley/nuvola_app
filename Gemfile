@@ -12,6 +12,7 @@ gem "gravatar_image_tag"
 gem "will_paginate"
 gem "auto_html"
 gem "nested_form"
+gem 'stripe'
 
 group :development do
 gem "rspec-rails"

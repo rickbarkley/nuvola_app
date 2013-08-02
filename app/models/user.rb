@@ -10,11 +10,15 @@
 #  encrypted_password :string(255)
 #  salt               :string(255)
 #  admin              :boolean          default(FALSE)
+#  courses_purchased  :string(255)
 #
 
 class User < ActiveRecord::Base
   attr_accessor :password
     attr_accessible :email, :name, :password, :password_confirmation
+    has_and_belongs_to_many :courses
+    has_many :microposts, :dependent => :destroy
+    has_many :courses 
   
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   

@@ -5,6 +5,17 @@
 <br />
 <p></p>
 <p></p>
+
+<%#<% if @course.purchased? %>
+<% if current_user = @course.user_id %>
+
+
+<ol>
+<% for video in @course.videos %>
+<%=h video.media_url.html_safe %>
+</ol>
+<% end %>
+<% else %>
 <p>Description: <%= @course.description %></p><br />
 
 <p> Preview: </p>
@@ -15,8 +26,4 @@
 
 
 <li><%= link_to "Purchase Now", '#' %></li>
-<ol>
-<% for video in @course.videos %>
-<%=h video.media_url.html_safe %>
-</ol>
 <% end %>

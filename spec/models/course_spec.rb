@@ -10,6 +10,7 @@
 #  updated_at  :datetime         not null
 #  media_url   :string(255)
 #  purchased   :boolean
+#  user_id     :integer
 #
 
 require 'spec_helper'

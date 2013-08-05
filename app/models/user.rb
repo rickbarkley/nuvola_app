@@ -16,9 +16,9 @@
 class User < ActiveRecord::Base
   attr_accessor :password
     attr_accessible :email, :name, :password, :password_confirmation
-    has_and_belongs_to_many :courses
     has_many :microposts, :dependent => :destroy
-    has_many :courses 
+    has_many :orders
+    has_many :courses, through: :orders
   
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   

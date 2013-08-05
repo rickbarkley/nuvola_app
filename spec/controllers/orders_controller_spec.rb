@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe FinalcoursesController do
+describe OrdersController do
 
   describe "GET 'new'" do
     it "returns http success" do

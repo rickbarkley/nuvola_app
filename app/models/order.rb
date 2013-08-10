@@ -11,13 +11,14 @@
 #
 
 class Order < ActiveRecord::Base
-    attr_accessible :stripe_card_token, :course_id
+    attr_accessible :stripe_card_token, :course_id, :user_id
     attr_accessor :stripe_card_token
   # attr_accessible :title, :body
     belongs_to :course
     belongs_to :user
     
     def save_with_payment
+        #@amount = self.course.cost
         @amount = 500
         if valid?
             charge = Stripe::Charge.create(amount: @amount, currency: 'usd', card: stripe_card_token)

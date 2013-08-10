@@ -2,8 +2,9 @@
 
 <%= form_for @order do |f| %>
 <%= f.hidden_field :stripe_card_token %>
-<%= f.hidden_field :course_id, :value => @course %>
+<%= f.hidden_field :course_id, :value => @course.id %>
 <%= f.hidden_field :user_id, :value => current_user.id %>
+
 <p>
 <%#<%= f.label "course ID" %><br />
 <%#<%= f.text_field :course_id %>

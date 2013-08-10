@@ -1,3 +1,4 @@
+
 <table class="profile" summery="Profile Information">
 	<tr>
 		<td class="main">
@@ -6,8 +7,9 @@
 <%= @user.name %>
 </h1>
 <% unless @user.microposts.empty? %>
+<% @user.microposts.each do |micropost| %>
 <table class="microposts" summary="User microposts">
-	 <% @user.microposts.each do |micropost| %>
+	 
 	<%#<% render @microposts %>
 	<tr>
 		<td class="micropost">
@@ -24,10 +26,11 @@
 	</td>
 <td class="sidebar round">	
 	<strong>Name</strong> <%= @user.name %><br />
+	<strong>Email</strong> <%= @user.email %><br />
 	<strong>URL</strong>  <%= link_to user_path(@user), @user %><br />
 	<strong>Microposts</strong> <%= @user.microposts.count %>
 	</td>
 	</tr>
 	</table>
-
 <%= @user.email %>
+

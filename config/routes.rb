@@ -5,14 +5,23 @@ NuvolaApp::Application.routes.draw do
 
  
 
-get "classes/index"
-get "finalcourses/index"
+  get "purchases/new"
+
+  get "courses/:id/orders/new"
+    
+  get "orders/new"
+
+  get "microposts/create"
+
+  get "microposts/destroy"
+
+
     
 resources :users
 resources :sessions, :only => [ :new, :create, :destroy ]  
-resources :classes
 resources :courses
-resources :finalcourses
+resources :microposts, :only => [ :create, :destroy ]
+resources :orders
 
 match '/signup', :to => 'users#new'
 match '/signin', :to => 'sessions#new'
@@ -21,14 +30,11 @@ match '/about', :to => 'pages#about'
 match '/contact', :to => 'pages#contact'
 match '/communities', :to => 'pages#communities'
 match '/trending', :to => 'pages#trending'
-match '/classes/stand', :to => 'pages#stand'
-match '/classes/win7', :to => 'pages#win7'
-match '/classes/tcpip', :to => 'pages#tcpip'
 match '/new', :to => 'classes#new'
 match '/course_creation', :to => 'courses#new'
 match '/admin', :to => 'pages#admin'
-match '/final_course', :to => 'finalcourses#new'
-match '/finalcourses', :to => 'finalcourses#index'
+    match '/courses/:id/orders', :to => 'orders#new'
+    match '/courses/:id/purchases', :to => 'purchases#new'
 root :to => 'pages#home'
 
   # The priority is based upon order of creation:

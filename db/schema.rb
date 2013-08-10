@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130711195822) do
+ActiveRecord::Schema.define(:version => 20130806174648) do
 
   create_table "classes", :force => true do |t|
     t.string   "title"
@@ -29,11 +29,36 @@ ActiveRecord::Schema.define(:version => 20130711195822) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.string   "media_url"
+    t.boolean  "purchased"
+    t.integer  "user_id"
+  end
+
+  create_table "courses_users", :force => true do |t|
+    t.integer "course_id"
+    t.integer "user_id"
   end
 
   create_table "finalcourses", :force => true do |t|
     t.string   "title"
     t.string   "video"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "microposts", :force => true do |t|
+    t.string   "content"
+    t.integer  "user_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.integer  "micropost_id"
+  end
+
+  add_index "microposts", ["user_id"], :name => "index_microposts_on_user_id"
+
+  create_table "orders", :force => true do |t|
+    t.integer  "course_id"
+    t.integer  "user_id"
+    t.date     "expires"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -46,6 +71,7 @@ ActiveRecord::Schema.define(:version => 20130711195822) do
     t.string   "encrypted_password"
     t.string   "salt"
     t.boolean  "admin",              :default => false
+    t.string   "courses_purchased"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

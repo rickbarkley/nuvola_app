@@ -11,11 +11,13 @@ end
  
   def show
 	@course = Course.find(params[:id])
+    @order = Order.new
 	@title = @course.title
 end
 
   def new
 	@course = Course.new
+      @order = Order.new
       @video = Video.new
       3.times do
           video = @course.videos.build

@@ -9,4 +9,3 @@ class CreateMicroposts < ActiveRecord::Migration
       add_index :microposts, :user_id
       end
   end
-end

@@ -21,7 +21,11 @@ menu {
     -moz-border-radius:  10px;
     -webkit-border-radius:  10px;
     border-radius:  10px;
+<<<<<<< HEAD
 	box-shadow: 10px 10px 5px #888888;
+=======
+    box-shadow: 10px 10px 5px #888888;
+>>>>>>> 14a3178939b2f298bef5810244153e625d882180
 }
 menu li {
 	list-style-type: none;

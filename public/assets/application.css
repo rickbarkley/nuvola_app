@@ -10,19 +10,18 @@ body {
 }
 
 menu {
-	position: absolute;
-	top:20px;
-	float: right;
-	/*left: 890px;*/
-	right: 120px;
-	font-size: 125%;
-	background-color: white;
-        padding: 0 0.7em;
-        white-space: nowrap;
-	-moz-border-radius:  10px;
-	-webkit-border-radius:  10px;
-	border-radius:  10px;	
-	box-shadow: 10px 10px 5px #888888;
+    position: relative;
+    margin-top:-155px;
+    float: right;
+    right: 40px;
+    font-size: 115%;
+    background-color: #fff;
+    padding: 0 0.7em;
+    white-space: nowrap;
+    -moz-border-radius:  10px;
+    -webkit-border-radius:  10px;
+    border-radius:  10px;
+    box-shadow: 10px 10px 5px #888888;
 }
 menu li {
 	list-style-type: none;

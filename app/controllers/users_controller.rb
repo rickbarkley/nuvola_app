@@ -4,14 +4,21 @@ class UsersController < ApplicationController
   before_filter :admin_user,   :only => :destroy
 
   def index
-    	@users = User.paginate(:page => params[:page], :per_page => 10)
+    @users = User.paginate(:page => params[:page], :per_page => 10)
 	@title = "All Users"
     	   
   end
     
+    def my_courses
+        @orders = @user.orders.paginate(:page => params[:page])
+        @title = @user.name
+        end
+    
   def show
       @user = User.find(params[:id])
       @microposts = @user.microposts.paginate(:page => params[:page])
+      @orders = @user.orders.paginate(:page => params[:page])
+      
       @title = @user.name
   end
   

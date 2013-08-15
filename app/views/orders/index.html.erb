@@ -1,0 +1,18 @@
+<h1>My Courses</h1>
+	<h2>
+	<ul class="courses">
+		<% unless @user.orders.empty? %>
+		<% @user.orders.each do |order| %>
+		<li>
+			<%= link_to order.id, order %>
+			<%= order.user_id %>
+			<%= order.course_id %>
+			<%#<%= course.title %>
+			<% if current_user.admin? %>
+	                | <%= link_to "delete", course, :method => :delete, :confirm => "you sure?",
+	                                              :title => "Delete #{course.title}" %>
+	                <% end %>
+	<% end %>
+			</li>
+			<% end %>
+			</ul></h2>

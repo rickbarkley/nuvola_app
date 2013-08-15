@@ -17,12 +17,12 @@
 </ol>
 <% end %>
 <% else %>
-<p>Description: <%= @course.description %></p><br />
+<p><strong>Description:</strong> <%= @course.description %></p><br />
 
-<p> Preview: </p>
+<p><strong>Preview: </strong></p>
 <%= @course.media_url.html_safe %><br />
 <br />
-<p> Cost: $<%= @course.cost %></p>
+<p><strong>Cost:</strong> $<%= @course.cost/100 %></p>
 
 
 
@@ -33,6 +33,8 @@
 <%= f.hidden_field :stripe_card_token %>
 <%= f.hidden_field :course_id, :value => @course.id %>
 <%= f.hidden_field :user_id, :value => current_user.id %>
+<%= f.hidden_field :course_title, :value => @course.title %>
+<%= f.hidden_field :amount, :value => @course.cost %>
 
 
   <div class="field">

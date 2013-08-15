@@ -14,6 +14,7 @@ NuvolaApp::Application.routes.draw do
   get "microposts/create"
 
   get "microposts/destroy"
+    get "users/my_courses"
 
 
     
@@ -35,6 +36,7 @@ match '/course_creation', :to => 'courses#new'
 match '/admin', :to => 'pages#admin'
     match '/courses/:id/orders', :to => 'orders#new'
     match '/courses/:id/purchases', :to => 'purchases#new'
+    match '/my_courses', :to => 'users#my_courses'
 root :to => 'pages#home'
 
   # The priority is based upon order of creation:

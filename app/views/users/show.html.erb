@@ -6,6 +6,7 @@
 <%= gravatar_for @user %>	
 <%= @user.name %>
 </h1>
+
 <% unless @user.microposts.empty? %>
 <% @user.microposts.each do |micropost| %>
 <table class="microposts" summary="User microposts">
@@ -28,9 +29,14 @@
 	<strong>Name</strong> <%= @user.name %><br />
 	<strong>Email</strong> <%= @user.email %><br />
 	<strong>URL</strong>  <%= link_to user_path(@user), @user %><br />
-	<strong>Posts</strong> <%= @user.microposts.count %>
+	<strong>Posts</strong> <%= @user.microposts.count %><br />
+	<strong>Courses purchased</strong> <br />
+	<% unless @user.orders.empty? %>
+	<% @user.orders.each do |order| %>
+	<ul><%= order.course_title %></ul>
+		<% end %>
 	</td>
 	</tr>
 	</table>
-<%= @user.email %>
+<% end %>
 

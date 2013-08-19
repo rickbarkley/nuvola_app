@@ -8,6 +8,10 @@
                 | <%= link_to "delete", course, :method => :delete, :confirm => "you sure?",
                                               :title => "Delete #{course.title}" %>
                 <% end %>
+				<% if current_user.admin? %>
+		                | <%= link_to "Edit", :action => :edit, :id => course %>
+						| <%= link_to "Enroll Users", :controller => :orders, :action => :new, :course_id => course %>
+		                <% end %>
 		
 		</li>
 		<% end %>

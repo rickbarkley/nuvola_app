@@ -23,9 +23,11 @@
 <p>
   <%= f.fields_for :videos do |builder| %>
     <%= render "video_fields", :f => builder %>
+<% end %>
+<p><%= link_to_add_fields "Add Another Module", f, :videos %></p>
 </p>
 
 
-  <% end %>
+
   <p><%= f.submit "Submit" %></p>
 <% end %>

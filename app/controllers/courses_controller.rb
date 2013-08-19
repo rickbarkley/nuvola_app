@@ -1,8 +1,6 @@
 class CoursesController < ApplicationController
     
-  before_filter :authenticate, :only => [:index, :edit, :update]
-  before_filter :correct_user, :only => [:edit, :update]
-  before_filter :admin_user,   :only => [:destroy, :create]
+    before_filter :admin_user,   :only => [:destroy, :create, :edit, :update]
 
   def index
 	@courses = Course.all
@@ -38,6 +36,7 @@ end
 end      
 end
    def edit
+       @course = Course.find(params[:id])
 	@title = "Edit title"
 	end
 
@@ -63,7 +62,7 @@ end
   
   def destroy
 	Course.find(params[:id]).destroy
-	flash[:success] = "User destroyed."
+	flash[:success] = "Course destroyed."
 	redirect_to courses_path
 end
 

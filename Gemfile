@@ -14,6 +14,7 @@ gem "will_paginate"
 gem "auto_html"
 gem "nested_form"
 gem 'stripe'
+gem 'sprockets'
 
 group :development do
 gem "rspec-rails"

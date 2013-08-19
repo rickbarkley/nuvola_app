@@ -7,6 +7,7 @@
 #  updated_at :datetime         not null
 #  media_url  :string(255)
 #  course_id  :integer
+#  chapter    :string(255)
 #
 
 require 'spec_helper'

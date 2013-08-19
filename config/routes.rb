@@ -7,7 +7,7 @@ NuvolaApp::Application.routes.draw do
 
   get "purchases/new"
 
-  get "courses/:id/orders/new"
+    #get "courses/:id/orders/new"
     
   get "orders/new"
 
@@ -15,12 +15,16 @@ NuvolaApp::Application.routes.draw do
 
   get "microposts/destroy"
     get "users/my_courses"
+    get "courses/edit"
 
 
     
 resources :users
-resources :sessions, :only => [ :new, :create, :destroy ]  
-resources :courses
+resources :sessions, :only => [ :new, :create, :destroy ]
+    resources :courses
+resources :courses do
+        resources :orders
+    end
 resources :microposts, :only => [ :create, :destroy ]
 resources :orders
 
@@ -34,7 +38,7 @@ match '/trending', :to => 'pages#trending'
 match '/new', :to => 'classes#new'
 match '/course_creation', :to => 'courses#new'
 match '/admin', :to => 'pages#admin'
-    match '/courses/:id/orders', :to => 'orders#new'
+    #match '/courses/:id/orders', :to => 'orders#new'
     match '/courses/:id/purchases', :to => 'purchases#new'
     match '/my_courses', :to => 'users#my_courses'
 root :to => 'pages#home'

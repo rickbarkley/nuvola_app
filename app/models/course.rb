@@ -19,7 +19,7 @@ include AutoHtml
     has_many :videos, :dependent => :destroy
     has_many :orders
     has_many :users, through: :orders
-    attr_accessible :videos_attributes, :cost, :description, :title, :media_url
+    attr_accessible :videos_attributes, :cost, :description, :title, :media_url, :chapter
     accepts_nested_attributes_for :videos, :allow_destroy => true
 
     def accessible_by_user?(user)
